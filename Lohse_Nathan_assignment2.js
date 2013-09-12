@@ -8,6 +8,8 @@ var assaultName = "Frankie";
 var commanderName = "Jax";
 var squaddies = 5;
 var aim = 0;
+var fought = false;
+var shotsFired = 0;
 
 var sniperShot = function(aimRating) //Procedure
 {
@@ -53,8 +55,10 @@ var bulletsFired = function (squaddies) //Number Function
 
 }
 
-var fallenNames = function(commanderName, assaultName) //String Function
+var nextOfKin = function(commanderName, assaultName) //String Function
 {
+	var sendString = ("Looks like " + assaultName + " isn't going to make it.  Have " + commanderName + " write their next of kin a letter with our condolances.");
+	return sendString;
 
 }
 
@@ -63,8 +67,13 @@ aim = prompt("What is the aim rating of your sniper? (1-100)");
 sniperShot(aim);
 fight = confirm("Do we run or do we fight, sir?");
 console.log(fight);
-fight = combat(fight, squaddies);
-bulletsFired(squaddies);
+fought = combat(fight, squaddies);
+shotsFired = bulletsFired(squaddies);
+console.log("Did our troops fight bravely?  Answer: " + fought);
+console.log("Bullets our soldiers fired? Answer: " + shotsFired);
+console.log(nextOfKin(commanderName, assaultName));
+
+
 
 
 
