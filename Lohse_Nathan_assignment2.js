@@ -1,29 +1,35 @@
 /*Nathan Lohse
 9/12/2013
 x-COM: Iron Man*/
-
+alert("Hello!"); 
 var sniperKill = false;
 var assaultLives = false;
 var assaultName = "Frankie";
 var commanderName = "Jax";
 var squaddies = 5;
+var aim = 0;
 
-var function sniperShot(percentHit) //returns sniperKill boolean, 'procedure'
+var sniperShot = function(aimstuff) //Procedure
 {
 
 }
 
-var function assaultCharge(chargeOrShoot, sniperKill) //Boolean Function
+var assaultCharge = function (chargeOrShoot, sniperKill) //Boolean Function
 {
 
 }
 
-var function fallenNames(commanderName, assaultName) //String Function
+var fallenNames = function(commanderName, assaultName) //String Function
 {
 
 }
 
-var function survivingSquad(squaddies, assaultLives) //Number Function
+var survivingSquad = function (squaddies, assaultLives) //Number Function
 {
 
 }
+
+aim = prompt("What is the aim rating of your sniper?");
+sniperShot(aim);
+
+
