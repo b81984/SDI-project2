@@ -1,7 +1,6 @@
 /*Nathan Lohse
 9/12/2013
 x-COM: Iron Man*/
-alert("Hello!"); 
 var fight = false;
 var assaultLives = false;
 var assaultName = "Frankie";
