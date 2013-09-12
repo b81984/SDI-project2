@@ -9,9 +9,16 @@ var commanderName = "Jax";
 var squaddies = 5;
 var aim = 0;
 
-var sniperShot = function(aimstuff) //Procedure
+var sniperShot = function(aimRating) //Procedure
 {
-
+	if(aimRating < 65)
+	{
+		console.log("Oh no, the sniper misses his shot!");
+	}
+	else
+	{
+		console.log("The sniper makes his kill!  Good shot!");
+	}
 }
 
 var assaultCharge = function (chargeOrShoot, sniperKill) //Boolean Function
@@ -29,7 +36,7 @@ var survivingSquad = function (squaddies, assaultLives) //Number Function
 
 }
 
-aim = prompt("What is the aim rating of your sniper?");
+aim = prompt("What is the aim rating of your sniper? (1-100)");
 sniperShot(aim);
 
 
