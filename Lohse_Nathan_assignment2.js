@@ -40,23 +40,33 @@ var combat = function (fightOrFlight, squaddies) //Boolean Function
 	return true;
 
 }
+var bulletsFired = function (squaddies) //Number Function
+{
+	var shotsPerGuy = 12;
+	for(var i = 0; i < squaddies; i++)
+	{
+		console.log("The average number of shots fired on this sort of mission with " + (i+1) + " soldiers is " + (shotsPerGuy * (i+1)) + ".");
+	}
+
+	return(shotsPerGuy * squaddies);
+
+
+}
 
 var fallenNames = function(commanderName, assaultName) //String Function
 {
 
 }
 
-var survivingSquad = function (squaddies, assaultLives) //Number Function
-{
-
-}
 
 aim = prompt("What is the aim rating of your sniper? (1-100)");
 sniperShot(aim);
 fight = confirm("Do we run or do we fight, sir?");
 console.log(fight);
 fight = combat(fight, squaddies);
-console.log()
+bulletsFired(squaddies);
+
+
 
 
 
