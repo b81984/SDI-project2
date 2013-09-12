@@ -12,7 +12,7 @@ var shotsFired = 0;
 
 var sniperShot = function(aimRating) //Procedure
 {
-	if(aimRating < 65)
+	if(aimRating < 35 || aimRating > 95)
 	{
 		console.log("Oh no, the sniper misses his shot!");
 	}
@@ -25,11 +25,16 @@ var sniperShot = function(aimRating) //Procedure
 var combat = function (fightOrFlight, squaddies) //Boolean Function
 {
 	var i = 0;
+	var survivors = squaddies - 1;
 	while(i < squaddies)
 	{
-		if(fightOrFlight === true)
+		if(fightOrFlight != false && i < survivors)
 		{
-			console.log("Squaddie number " + (i+1) + " fires their weapon at the alien menace!");
+			console.log("Squaddie number " + (i+1) + " fires their weapon at the alien menace, and lives to fight another day!");
+		}
+		else if(fightOrFlight === true)
+		{
+			console.log("Squaddie number " + (i+1) + " fires their weapon at the alien menace, but dies in a blaze of glory!");
 		}
 		else
 		{
@@ -65,7 +70,6 @@ var nextOfKin = function(commanderName, assaultName) //String Function
 aim = prompt("What is the aim rating of your sniper? (1-100)");
 sniperShot(aim);
 fight = confirm("Do we run or do we fight, sir?");
-console.log(fight);
 fought = combat(fight, squaddies);
 shotsFired = bulletsFired(squaddies);
 console.log("Did our troops fight bravely?  Answer: " + fought);
